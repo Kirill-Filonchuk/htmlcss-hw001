@@ -1,0 +1,96 @@
+
+/* Start HERO */
+.overlay {
+  @include overlay-hero (100%, 400px, 'hr-mob.jpg');
+}
+  
+  
+@media  screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+  .overlay {
+    @include overlay-hero (100%, 400px, 'hr-mob@2x.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    @include overlay-hero (100%, 400px, 'hr-tabl.jpg');
+  }
+
+  @media  screen  and (min-device-pixel-ratio: 2),
+          screen  and (min-resolution: 192dpi),
+          screen  and (min-resolution: 2dppx) {
+  .overlay {
+    @include overlay-hero (100%, 400px, 'hr-tabl@2x.jpg');
+  }
+}
+
+}
+
+@media (min-width: 1200px)  {
+  .overlay {
+    @include overlay-hero (100%, 600px, 'hr-desk.jpg');
+  }
+
+  @media  screen  and (min-device-pixel-ratio: 2),
+          screen  and (min-resolution: 192dpi),
+          screen  and (min-resolution: 2dppx) {
+   .overlay {
+     @include overlay-hero (100%, 600px, 'hr-desk@2x.jpg');
+   }
+
+}
+}
+
+.hero {
+  background-color: var(--footer-bg-color);
+
+  text-align: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.hero-title {
+  font-weight: 900;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-bg-color);
+
+  margin-bottom: 30px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1199px) {
+
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+  
+  .hero-title {
+    @include line-height-calc(26, 42);
+      
+    max-width: 360px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  .hero-title {
+    @include line-height-calc(44, 60);
+       
+    max-width: 696px;
+  }
+}

@@ -1,0 +1,243 @@
+
+@media screen and (max-width: 767px) {
+.footer-logo {
+  text-align: center;
+  margin-bottom: 20px;
+  
+ }
+ .address-list {
+  text-align: center;
+
+  .items:not(:last-child) {
+          margin-bottom: 9px;
+        }
+ }
+
+ .address-futer {
+  text-decoration: none;
+  font-style: normal;
+
+  margin-bottom: 60px;
+}
+
+.address-office {
+  font-weight: 400;
+  @include line-height-calc(14, 24);
+  
+  letter-spacing: 0.03em;
+  color: var(--primary-bg-color);
+  text-decoration: inherit;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus
+  {
+    color: var(--accent-color);
+  }
+}
+
+.address-mail,
+.adress-tel {
+  font-weight: 400;
+  @include line-height-calc(14, 24);
+ 
+  letter-spacing: 0.03em;
+  text-decoration: inherit;
+  color: var(--footer-rare-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus
+    {
+      color: var(--accent-color);
+    }
+
+}
+
+.footer-call {
+  display: block;
+ 
+  font-weight: 700;
+  @include line-height-calc(14, 16);
+ 
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-bg-color);
+
+  margin-bottom: 20px;
+}
+
+}
+
+///////////////////////////////////////////// 
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-logo .f-logo{
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+    margin-right: 0;
+    margin-top: 0;
+    
+   }
+   .address-list {
+    text-align: center;
+    width: 232px;
+  
+    .items:not(:last-child) {
+            margin-bottom: 9px;
+          }
+   }
+  
+   .address-futer {
+    text-decoration: none;
+    font-style: normal;
+  
+    margin-bottom: 60px;
+  }
+  
+  .address-office {
+    font-weight: 400;
+    @include line-height-calc(14, 24);
+    
+    letter-spacing: 0.03em;
+    color: var(--primary-bg-color);
+    text-decoration: inherit;
+  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+    &:hover,
+    &:focus
+    {
+      color: var(--accent-color);
+    }
+  }
+  
+  .address-mail,
+  .adress-tel {
+    font-weight: 400;
+    @include line-height-calc(14, 24);
+   
+    letter-spacing: 0.03em;
+    text-decoration: inherit;
+    color: var(--footer-rare-text-color);
+  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+      &:hover,
+      &:focus
+      {
+        color: var(--accent-color);
+      }
+  
+  }
+  
+  .footer-call {
+    display: block;
+   
+    font-weight: 700;
+    @include line-height-calc(14, 16);
+   
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: var(--primary-bg-color);
+  
+    margin-bottom: 20px;
+  }
+  
+}
+
+/////////////////////////
+
+@media screen and (min-width: 1200px) {
+  .footer-logo .f-logo{
+   
+    margin-bottom: 20px;
+    display: flex;
+   
+    
+   }
+  .address-list {
+      
+    @include flex($prop: display, $fd: column);
+      
+    .items:not(:last-child) {
+      margin-bottom: 9px;
+    }
+
+  }
+   
+  .address-futer {
+    text-decoration: none;
+    font-style: normal;
+  }
+  
+  .address-office {
+    font-weight: 400;
+    @include line-height-calc(14, 24);
+   
+    letter-spacing: 0.03em;
+    color: var(--primary-bg-color);
+    text-decoration: inherit;
+  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus
+    {
+      color: var(--accent-color);
+    }
+  }
+  
+  .address-mail,
+  .adress-tel {
+    font-weight: 400;
+    @include line-height-calc(14, 24);
+    
+    letter-spacing: 0.03em;
+    text-decoration: inherit;
+    color: var(--footer-rare-text-color);
+  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus
+      {
+        color: var(--accent-color);
+      }
+
+  }
+  
+  
+  .footer-section {
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-call {
+    font-weight: 700;
+    @include line-height-calc(14, 16);
+   
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: var(--primary-bg-color);
+  
+    margin-bottom: 20px;
+  }
+  
+  .footer-logo-adress {
+    margin-right: 70px;
+  }
+}

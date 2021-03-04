@@ -1,0 +1,115 @@
+.team {
+  background-color: var(--second-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.team-title {
+  font-weight: 700;
+  @include line-height-calc(28,33);
+  // font-size: 36px;
+  // line-height: 1.167;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+  // margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+.team-member-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0 24px 0;
+  // padding-right: 122px;
+  // padding-left: 122px;
+  // padding-bottom: 24px;
+  // padding-top: 30px;
+}
+
+.team-list-title {
+  font-weight: 500;
+  @include line-height-calc(16,19);
+  // font-size: 16px;
+  // line-height: 1.188;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.team-list-text {
+  font-weight: 400;
+  @include line-height-calc(16,19);
+  // font-size: 16px;
+  // line-height: 1.188;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.team-list .team-card {
+  background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (max-width: 767px) {
+    .team-card:not(:last-child) {
+      margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  // .team-member-box {
+  //   // padding-right: 74px;
+  //   // padding-left: 74px;
+  //   // padding-bottom: 24px;
+  //   // padding-top: 30px;
+  // }
+
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
+  
+  }
+
+  .team-card {
+      // max-width: none;
+      width: 354px;
+
+      flex-basis: calc(100% / 2 - var(--card-set-gap));
+
+      margin-left: var(--card-set-gap);
+      margin-top: var(--card-set-gap);
+      }
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+        
+        padding-top: 94px;
+        padding-bottom: 94px;
+      }
+      .team-card {
+        flex-basis: calc(100% / 4 - var(--card-set-gap));
+      
+        margin-left: var(--card-set-gap);
+        margin-top: var(--card-set-gap);
+      }
+
+      .team-title {
+       
+        @include line-height-calc(36,42);
+            margin-bottom: 50px;
+        
+      }
+      
+      .team-member-box {
+        padding: 30px 32px;
+      }
+}  

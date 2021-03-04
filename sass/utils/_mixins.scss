@@ -1,0 +1,59 @@
+@mixin d_flex($alignment) {
+    display: flex;
+    justify-content: $alignment;
+}
+
+@mixin line-height-calc($fs, $lh) {
+    // переменные для font-size- $fs , line-height - $lh
+    $lh-n: $lh * 1000;
+    // создаю переменную $lh-n - $lh умноженную на 1000, т.к. я хочу точность до десятитысяных
+    $lh-b: $lh-n / $fs;
+    // созданная промежуточная переменная $lh-b - в 1000 раз больше искомой, но еще она может быть и иррациональной
+    $lh-round: ceil($lh-b);
+    // применяю функцию - округление до целых
+    $lh-my: $lh-round/1000;
+    // возвращаю значение в искомую переменную - округленное , Целое значение превращаю в десятичную дробь с требуемым классом точности,
+    // Использую особенности SASS для получения из безразмерной величины - размерную - px 
+    font-size: $fs * 1px;
+    line-height: $lh-my;
+  
+}
+
+@mixin w-h($w,$h) {
+    width: $w*1px;
+    height: $h*1px;
+}
+
+@mixin flex($prop, $d: flex, $jc: flex-start, $ai: flex-start, $fd: row) {
+    #{$prop}: $d;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+  
+@mixin icon-list($list, $selector){
+    #{$selector} {
+        @each $name, $path in $list {
+          &-#{$name}::before {
+            background-image: $path;
+            background-size: 70px 70px;
+            }
+         }
+      }
+}
+   
+@mixin overlay-hero ($mw, $h, $bi) {
+      max-width: $mw;
+      height: $h;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ),
+        // url('../images/hero/#{$bi}');
+        url('../images/hero/#{$bi}');
+      margin: auto;
+}
+      

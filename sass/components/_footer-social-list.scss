@@ -1,0 +1,44 @@
+.footer-social-list {
+  @include d_flex(center);
+  
+}
+
+
+.footer-social-list-items {
+@include w-h(44,44);
+
+
+&:not(:last-child) {
+  margin-right: 10px;
+}
+}
+
+.footer-social-list-link {
+@include d_flex(center);
+
+align-items: center;
+background-color: var(--footer-social-fill-color);
+border-radius: 50%;
+height: 100%;
+
+color: var(--primary-bg-color);
+
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:hover,
+&:focus {
+  background-color: var(--accent-color);
+}
+}
+
+.footer-social-icon {
+@include w-h(20,20);
+
+fill: currentColor;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px){
+  .footer-social {
+    margin-right: calc((89 - 15)*1px);
+  }
+}

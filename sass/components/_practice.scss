@@ -1,0 +1,64 @@
+
+@media screen and (max-width: 1199px) {
+  .practice {
+    display: none;
+  }
+}
+
+.practice {
+    margin-bottom: 94px;
+  }
+  
+  .practice-list {
+    @extend %df_fw;
+    // display: flex;
+    // flex-wrap: wrap;
+  
+    margin-top: calc(-1 * var(--card-set-gap));
+    margin-left: calc(-1 * var(--card-set-gap));
+  }
+  
+  .practice-title {
+    font-weight: 700;
+    @include line-height-calc(36,42);
+    // font-size: 36px;
+    // line-height: 1.167;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+    margin-bottom: 50px;
+  }
+  
+  .practice-list-items {
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+  
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+  }
+  // Practice decoration title 
+  
+  .practice-thumb {
+    position: relative;
+  }
+  
+  .practice-description {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+  
+    background-color: var(--practice-description-color);
+  
+    bottom: 0;
+  
+    font-weight: 700;
+    @include line-height-calc(14,16);
+    // font-size: 14px;
+    // line-height: 1.143;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: var(--primary-bg-color);
+  }

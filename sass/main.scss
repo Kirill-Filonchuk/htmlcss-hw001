@@ -1,0 +1,60 @@
+// Utils
+@import "./base/fonts";
+@import "./utils/variables";
+@import "./utils/visually_hidden";
+@import "./utils/mixins";
+@import "./utils/placeholder";
+
+// Base
+@import "./base/common";
+@import "./base/container";
+
+// Components
+@import "./components/mobile-menu";
+@import "./components/header";
+@import "./components/logo";
+@import "./components/navigation-header";
+
+@import "./components/hero";
+@import "./components/hero-btn";
+@import "./components/modal-window";
+
+@import "./components/team-socil-links";
+
+@import "./components/modal-form";
+
+
+
+// Section 
+
+/*  ========= Particularities  =========  */
+@import "./components/particularities";
+
+/*  ========= Practice  =========  */
+@import "./components/practice";
+
+/*  ========= Our team  =========  */
+@import "./components/our-team";
+
+/*  ========= Our regular customers  =========  */
+@import "./components/reg-customers";
+
+/*  ========= Footer  =========  */
+@import "./components/footer-social-list";
+@import "./components/footer";
+
+/*  ========= Footer Address list   =========  */
+@import "./components/footer-adress-list";
+
+/*  ========= Footer Form    =========  */
+@import "./components/footer-form";
+
+/* 
+// Portfolio 
+@import "./components/portfolio";
+// Filtres button
+@import "./components/filtress-btn";
+// Portfolio-Cards
+@import "./components/portfolio-cards";
+
+ */
