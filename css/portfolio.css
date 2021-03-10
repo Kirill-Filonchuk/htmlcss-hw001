@@ -205,9 +205,11 @@ button {
 
 .mobile__menu {
   position: absolute;
-  width: 100%;
+  width: 101vw;
   max-width: 480px;
   height: 100vh;
+  min-height: 500px;
+  overflow-y: scroll;
   top: 0;
   left: 50%;
   display: -webkit-box;
@@ -327,25 +329,20 @@ button {
 }
 
 .mobile__social__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-  margin-right: 10px;
-  padding-right: 10px;
-  height: 22px;
+  position: relative;
 }
 
-.mobile__social__items:last-child {
-  border-right: none;
-  margin-right: 0;
-  padding-right: 0;
+.mobile__social__items:not(:last-child) {
+  margin-right: 20px;
+}
+
+.mobile__social__items:not(:last-child) .mobile__social__link::after {
+  position: absolute;
+  content: '';
+  height: 22px;
+  width: 1px;
+  background-color: rgba(33, 33, 33, 0.2);
+  margin-left: 10px;
 }
 
 .mobile__social__link {
@@ -361,6 +358,8 @@ button {
 @media screen and (min-width: 767px) {
   .mobile__menu {
     display: none;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -419,6 +418,12 @@ button {
             flex-direction: row;
   }
   .navigation__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 40px;
     height: 40px;
     background-color: transparent;
@@ -446,6 +451,9 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .site-nav {
     display: -webkit-box;

@@ -26,12 +26,18 @@
 
 
 ////////////////////////
-
+ 
 .mobile__menu {
     position: absolute;
-    width: 100%;
+    // width: 100%;
+width: 101vw;
     max-width: 480px;
     height: 100vh;
+    ///////////////
+    min-height: 500px;
+    overflow-y: scroll;
+////////////
+
     top: 0;
     left: 50%;
 
@@ -164,24 +170,46 @@
 }
 
 
-.mobile__social__items {
-    display: flex;
-    justify-content: center;
+// First method
+// .mobile__social__items {
+//     display: flex;
+//     justify-content: center;
     
-    align-items: center;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-    margin-right: 10px;
-    padding-right: 10px;
-    height: 22px;
+//     align-items: center;
+//     border-right: 1px solid rgba(33, 33, 33, 0.2);
+//     margin-right: 10px;
+//     padding-right: 10px;
+//     height: 22px;
 
-    &:last-child {
-        border-right: none;
-        margin-right: 0;
-        padding-right: 0;
-    } 
+//     &:last-child {
+//         border-right: none;
+//         margin-right: 0;
+//         padding-right: 0;
+//     } 
+// }
 
+///////// Second method
+.mobile__social__items {
+    position: relative;
+    &:not(:last-child){
+       margin-right: 20px;
+    }
+   }
+
+.mobile__social__items:not(:last-child) {
+
+      &  .mobile__social__link::after {
+            position: absolute;
+            content: '';
+            height: 22px;
+            width: 1px;
+            background-color: rgba(33,33,33,0.2);
+            margin-left: 10px;
+      }    
 }
 
+
+//////////////////////////////
 .mobile__social__link {
     font-weight: 500;
     @include line-height-calc(18,22); 
@@ -198,6 +226,9 @@
 @media screen and (min-width: 767px) {
     .mobile__menu {
         display: none;
+
+        opacity: 0;
+        visibility: hidden;
     }
 }
 

@@ -11,9 +11,13 @@
   .navigation {
     display: flex;
    flex-direction: row;
+  
     }
 
   .navigation__btn {
+display: flex; //add//
+justify-content: center; //add//
+
     width: 40px;
     height: 40px;
 
@@ -26,6 +30,8 @@
   
     .icon_btn {
         fill: currentColor;
+
+
       }
     &:hover,
     &:focus {
@@ -44,6 +50,7 @@
   .navigation {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       }
 
   .site-nav {
